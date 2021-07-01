@@ -1,0 +1,3 @@
+org\acme\quarkus\scala\three\deployment\Scala3CompilationProvider.class
+org\acme\quarkus\scala\three\deployment\Scala3CompilationProvider$CustomCompilerCallback.class
+org\acme\quarkus\scala\three\deployment\Scala3CompilationProvider$CustomReporter.class

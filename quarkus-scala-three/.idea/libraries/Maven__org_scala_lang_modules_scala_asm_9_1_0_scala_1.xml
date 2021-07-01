@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.scala-lang.modules:scala-asm:9.1.0-scala-1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/scala-lang/modules/scala-asm/9.1.0-scala-1/scala-asm-9.1.0-scala-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/scala-lang/modules/scala-asm/9.1.0-scala-1/scala-asm-9.1.0-scala-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/scala-lang/modules/scala-asm/9.1.0-scala-1/scala-asm-9.1.0-scala-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

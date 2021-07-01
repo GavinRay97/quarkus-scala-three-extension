@@ -1,0 +1,8 @@
+---
+name: "Quarkus Scala Three"
+metadata:
+  built-with-quarkus-core: "2.0.0.Final"
+  extension-dependencies:
+  - "io.quarkus:quarkus-arc::jar"
+  - "io.quarkus:quarkus-core::jar"
+artifact: "org.acme:quarkus-scala-three::jar:1.0.0-SNAPSHOT"

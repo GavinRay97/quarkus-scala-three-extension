@@ -1,0 +1,467 @@
+[0m2021.06.30 21:24:36 INFO  Started: Metals version 0.10.4 in workspace 'C:\Users\rayga\Projects\tmp\quarkus-scala-three' for client Visual Studio Code - Insiders 1.58.0-insider.[0m
+[0m2021.06.30 21:24:38 INFO  time: initialize in 2.08s[0m
+[0m2021.06.30 21:24:38 WARN  Build server is not auto-connectable.[0m
+[0m2021.06.30 21:24:38 WARN  no build target for: C:\Users\rayga\Projects\tmp\quarkus-scala-three-app\src\main\scala\org\acme\GreetingResource.scala[0m
+[0m2021.06.30 21:24:41 INFO  no build target: using presentation compiler with only scala-library: 3.0.0[0m
+[0m2021.06.30 21:24:43 INFO  time: code lens generation in 2.16s[0m
+[0m2021.06.30 21:24:43 INFO  time: code lens generation in 4.24s[0m
+[0m2021.06.30 21:24:57 WARN  no build target for: C:\Users\rayga\Projects\tmp\quarkus-scala-three-app\src\main\scala\org\acme\GreetingResource.scala[0m
+[0m2021.06.30 21:25:08 WARN  no build target for: C:\Users\rayga\Projects\tmp\quarkus-scala-three-app\src\main\scala\org\acme\GreetingResource.scala[0m
+Jun 30, 2021 9:27:58 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 84
+Jun 30, 2021 9:29:29 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jun 30, 2021 9:29:35 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFO: Unsupported notification method: $/setTrace
+Jun 30, 2021 9:31:29 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..16]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..16]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..16]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:80)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jun 30, 2021 9:31:30 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..16]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..16]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..16]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:80)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+Jun 30, 2021 9:31:35 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint fallbackResponseError
+SEVERE: Internal error: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..16]
+java.util.concurrent.CompletionException: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..16]
+	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
+	at java.base/java.util.concurrent.CompletableFuture.completeThrowable(CompletableFuture.java:346)
+	at java.base/java.util.concurrent.CompletableFuture$UniAccept.tryFire(CompletableFuture.java:704)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(CompletableFuture.java:506)
+	at java.base/java.util.concurrent.CompletableFuture.completeExceptionally(CompletableFuture.java:2088)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1(CancelTokens.scala:40)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$future$1$adapted(CancelTokens.scala:38)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.lang.IllegalArgumentException: 17 is not a valid line number, allowed [0..16]
+	at scala.meta.internal.inputs.InternalInput.lineToOffset(InternalInput.scala:37)
+	at scala.meta.internal.inputs.InternalInput.lineToOffset$(InternalInput.scala:32)
+	at scala.meta.inputs.Input$VirtualFile.lineToOffset(Input.scala:80)
+	at scala.meta.inputs.Position$Range$.lineLength$1(Position.scala:57)
+	at scala.meta.inputs.Position$Range$.apply(Position.scala:60)
+	at scala.meta.internal.mtags.MtagsEnrichments$XtensionPositionLspInverse.toMeta(MtagsEnrichments.scala:121)
+	at scala.meta.internal.parsing.Trees.$anonfun$findLastEnclosingAt$5(Trees.scala:71)
+	at scala.Option.flatMap(Option.scala:271)
+	at scala.meta.internal.parsing.Trees.findLastEnclosingAt(Trees.scala:70)
+	at scala.meta.internal.metals.codeactions.InsertInferredType.$anonfun$contribute$1(InsertInferredType.scala:80)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	... 4 more
+
+[0m2021.06.30 21:32:50 WARN  no build target for: C:\Users\rayga\Projects\tmp\quarkus-scala-three-app\src\main\scala\org\acme\GreetingResource.scala[0m
+[0m2021.06.30 21:44:07 WARN  no build target for: C:\Users\rayga\AppData\Local\Temp\Temp1_code-with-quarkus (2).zip\code-with-quarkus\src\test\scala\org\acme\GreetingResourceTest.scala[0m
+Exception in thread "pool-3-thread-1" java.util.NoSuchElementException: head of empty String
+	at scala.collection.StringOps$.head$extension(StringOps.scala:1124)
+	at dotty.tools.dotc.semanticdb.Scala3$StringOps$.isJavaIdent(Scala3.scala:171)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB.addName$1(ExtractSemanticDB.scala:291)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB.dotty$tools$dotc$semanticdb$ExtractSemanticDB$Extractor$$_$addDescriptor$1(ExtractSemanticDB.scala:329)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.addSymName(ExtractSemanticDB.scala:361)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.symbolName(ExtractSemanticDB.scala:370)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.registerUse(ExtractSemanticDB.scala:477)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.registerUseGuarded(ExtractSemanticDB.scala:474)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$15$$anonfun$1(ExtractSemanticDB.scala:234)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$12(ExtractSemanticDB.scala:236)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:236)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$1(ExtractSemanticDB.scala:140)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:140)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:39)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.semanticdbTextDocument$$anonfun$1(ScalaPresentationCompiler.scala:237)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:103)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[0m2021.06.30 21:44:23 WARN  no build target for: C:\Users\rayga\AppData\Local\Temp\Temp1_code-with-quarkus (2).zip\code-with-quarkus\src\main\scala\org\acme\GreetingResource.scala[0m
+[0m2021.06.30 21:44:28 INFO  time: code lens generation in 4.59s[0m
+Exception in thread "pool-3-thread-2" java.util.NoSuchElementException: head of empty String
+	at scala.collection.StringOps$.head$extension(StringOps.scala:1124)
+	at dotty.tools.dotc.semanticdb.Scala3$StringOps$.isJavaIdent(Scala3.scala:171)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB.addName$1(ExtractSemanticDB.scala:291)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB.dotty$tools$dotc$semanticdb$ExtractSemanticDB$Extractor$$_$addDescriptor$1(ExtractSemanticDB.scala:329)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.addSymName(ExtractSemanticDB.scala:361)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.symbolName(ExtractSemanticDB.scala:370)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.registerUse(ExtractSemanticDB.scala:477)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.registerUseGuarded(ExtractSemanticDB.scala:474)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$15$$anonfun$1(ExtractSemanticDB.scala:234)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$12(ExtractSemanticDB.scala:236)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:236)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$1(ExtractSemanticDB.scala:140)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:140)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:39)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.semanticdbTextDocument$$anonfun$1(ScalaPresentationCompiler.scala:237)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:103)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[0m2021.06.30 21:44:48 ERROR text document: file:///C:/Users/rayga/AppData/Local/Temp/Temp1_code-with-quarkus%20(2).zip/code-with-quarkus/src/test/scala/org/acme/GreetingResourceTest.scala
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.compile(InteractiveSemanticdbs.scala:183)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$1(InteractiveSemanticdbs.scala:80)
+	at java.util.HashMap.compute(HashMap.java:1228)
+	at java.util.Collections$SynchronizedMap.compute(Collections.java:2692)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:76)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.CodeLensProvider.findLenses(CodeLensProvider.scala:22)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$2(MetalsLanguageServer.scala:1501)
+	at scala.meta.internal.metals.TimerProvider.timedThunk(TimerProvider.scala:25)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$1(MetalsLanguageServer.scala:1499)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+[0m
+[0m2021.06.30 21:44:48 INFO  time: code lens generation in 39s[0m
+Exception in thread "pool-3-thread-3" java.util.NoSuchElementException: head of empty String
+	at scala.collection.StringOps$.head$extension(StringOps.scala:1124)
+	at dotty.tools.dotc.semanticdb.Scala3$StringOps$.isJavaIdent(Scala3.scala:171)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB.addName$1(ExtractSemanticDB.scala:291)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB.dotty$tools$dotc$semanticdb$ExtractSemanticDB$Extractor$$_$addDescriptor$1(ExtractSemanticDB.scala:329)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.addSymName(ExtractSemanticDB.scala:361)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.symbolName(ExtractSemanticDB.scala:370)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.registerUse(ExtractSemanticDB.scala:477)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.registerUseGuarded(ExtractSemanticDB.scala:474)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$15$$anonfun$1(ExtractSemanticDB.scala:234)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$12(ExtractSemanticDB.scala:236)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:236)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$1(ExtractSemanticDB.scala:140)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:140)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:39)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.semanticdbTextDocument$$anonfun$1(ScalaPresentationCompiler.scala:237)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:103)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[0m2021.06.30 21:45:08 ERROR text document: file:///C:/Users/rayga/AppData/Local/Temp/Temp1_code-with-quarkus%20(2).zip/code-with-quarkus/src/test/scala/org/acme/GreetingResourceTest.scala
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.compile(InteractiveSemanticdbs.scala:183)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$1(InteractiveSemanticdbs.scala:80)
+	at java.util.HashMap.compute(HashMap.java:1228)
+	at java.util.Collections$SynchronizedMap.compute(Collections.java:2692)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:76)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.decorations.SyntheticsDecorationProvider.currentDocument(SyntheticsDecorationProvider.scala:259)
+	at scala.meta.internal.decorations.SyntheticsDecorationProvider.publishSynthetics(SyntheticsDecorationProvider.scala:74)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$didOpen$6(MetalsLanguageServer.scala:980)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+[0m
+Jun 30, 2021 9:45:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 232
+Exception in thread "pool-3-thread-4" java.lang.InterruptedException
+	at scala.meta.internal.metals.FutureCancelToken.checkCanceled(FutureCancelToken.scala:29)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:195)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:103)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Jun 30, 2021 9:45:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 231
+Jun 30, 2021 9:45:08 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 235
+Exception in thread "pool-3-thread-5" java.util.NoSuchElementException: head of empty String
+	at scala.collection.StringOps$.head$extension(StringOps.scala:1124)
+	at dotty.tools.dotc.semanticdb.Scala3$StringOps$.isJavaIdent(Scala3.scala:171)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB.addName$1(ExtractSemanticDB.scala:291)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB.dotty$tools$dotc$semanticdb$ExtractSemanticDB$Extractor$$_$addDescriptor$1(ExtractSemanticDB.scala:329)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.addSymName(ExtractSemanticDB.scala:361)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.symbolName(ExtractSemanticDB.scala:370)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.registerUse(ExtractSemanticDB.scala:477)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.registerUseGuarded(ExtractSemanticDB.scala:474)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$15$$anonfun$1(ExtractSemanticDB.scala:234)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$12(ExtractSemanticDB.scala:236)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:236)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$1(ExtractSemanticDB.scala:140)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:140)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:39)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.semanticdbTextDocument$$anonfun$1(ScalaPresentationCompiler.scala:237)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:103)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[0m2021.06.30 21:45:28 ERROR text document: file:///C:/Users/rayga/AppData/Local/Temp/Temp1_code-with-quarkus%20(2).zip/code-with-quarkus/src/test/scala/org/acme/GreetingResourceTest.scala
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.compile(InteractiveSemanticdbs.scala:183)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$1(InteractiveSemanticdbs.scala:80)
+	at java.util.HashMap.compute(HashMap.java:1228)
+	at java.util.Collections$SynchronizedMap.compute(Collections.java:2692)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:76)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.decorations.SyntheticsDecorationProvider.currentDocument(SyntheticsDecorationProvider.scala:259)
+	at scala.meta.internal.decorations.SyntheticsDecorationProvider.publishSynthetics(SyntheticsDecorationProvider.scala:74)
+	at scala.meta.internal.metals.MetalsLanguageServer.didFocus(MetalsLanguageServer.scala:1025)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.lambda$null$0(GenericEndpoint.java:65)
+	at org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint.notify(GenericEndpoint.java:152)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.handleNotification(RemoteEndpoint.java:220)
+	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.consume(RemoteEndpoint.java:187)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.handleMessage(StreamMessageProducer.java:194)
+	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageProducer.listen(StreamMessageProducer.java:94)
+	at org.eclipse.lsp4j.jsonrpc.json.ConcurrentMessageProcessor.run(ConcurrentMessageProcessor.java:113)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+[0m
+Jun 30, 2021 9:45:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 237
+Jun 30, 2021 9:45:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 238
+Jun 30, 2021 9:45:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 241
+Jun 30, 2021 9:45:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 240
+Jun 30, 2021 9:45:28 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 239
+Exception in thread "pool-3-thread-6" java.util.NoSuchElementException: head of empty String
+	at scala.collection.StringOps$.head$extension(StringOps.scala:1124)
+	at dotty.tools.dotc.semanticdb.Scala3$StringOps$.isJavaIdent(Scala3.scala:171)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB.addName$1(ExtractSemanticDB.scala:291)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB.dotty$tools$dotc$semanticdb$ExtractSemanticDB$Extractor$$_$addDescriptor$1(ExtractSemanticDB.scala:329)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.addSymName(ExtractSemanticDB.scala:361)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.symbolName(ExtractSemanticDB.scala:370)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.registerUse(ExtractSemanticDB.scala:477)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.registerUseGuarded(ExtractSemanticDB.scala:474)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$15$$anonfun$1(ExtractSemanticDB.scala:234)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$12(ExtractSemanticDB.scala:236)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:236)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse$$anonfun$1(ExtractSemanticDB.scala:140)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:15)
+	at scala.runtime.function.JProcedure1.apply(JProcedure1.java:10)
+	at scala.collection.immutable.List.foreach(List.scala:333)
+	at dotty.tools.dotc.semanticdb.ExtractSemanticDB$Extractor.traverse(ExtractSemanticDB.scala:140)
+	at scala.meta.internal.pc.SemanticdbTextDocumentProvider.textDocument(SemanticdbTextDocumentProvider.scala:39)
+	at scala.meta.internal.pc.ScalaPresentationCompiler.semanticdbTextDocument$$anonfun$1(ScalaPresentationCompiler.scala:237)
+	at scala.meta.internal.pc.CompilerAccess.withSharedCompiler(CompilerAccess.scala:137)
+	at scala.meta.internal.pc.CompilerAccess.withNonInterruptableCompiler$$anonfun$1(CompilerAccess.scala:125)
+	at scala.meta.internal.pc.CompilerAccess.onCompilerJobQueue$$anonfun$1(CompilerAccess.scala:197)
+	at scala.meta.internal.pc.CompilerJobQueue$Job.run(CompilerJobQueue.scala:103)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+[0m2021.06.30 21:45:48 ERROR text document: file:///C:/Users/rayga/AppData/Local/Temp/Temp1_code-with-quarkus%20(2).zip/code-with-quarkus/src/test/scala/org/acme/GreetingResourceTest.scala
+java.util.concurrent.TimeoutException
+	at java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.compile(InteractiveSemanticdbs.scala:183)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$1(InteractiveSemanticdbs.scala:80)
+	at java.util.HashMap.compute(HashMap.java:1228)
+	at java.util.Collections$SynchronizedMap.compute(Collections.java:2692)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:76)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.CodeLensProvider.findLenses(CodeLensProvider.scala:22)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$2(MetalsLanguageServer.scala:1501)
+	at scala.meta.internal.metals.TimerProvider.timedThunk(TimerProvider.scala:25)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$1(MetalsLanguageServer.scala:1499)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:659)
+	at scala.util.Success.$anonfun$map$1(Try.scala:255)
+	at scala.util.Success.map(Try.scala:213)
+	at scala.concurrent.Future.$anonfun$map$1(Future.scala:292)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:64)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:829)
+[0m
+[0m2021.06.30 21:45:48 INFO  time: code lens generation in 20s[0m
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 243
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 246
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 247
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 245
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 244
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 236
+[0m2021.06.30 21:45:48 WARN  no build target for: C:\Users\rayga\Projects\tmp\quarkus-scala-three-app\src\main\scala\org\acme\GreetingResource.scala[0m
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 248
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 250
+[0m2021.06.30 21:45:48 WARN  no build target for: C:\Users\rayga\Projects\tmp\quarkus-scala-three-app\src\main\scala\org\acme\GreetingResource.scala[0m
+[0m2021.06.30 21:45:48 WARN  no build target for: C:\Users\rayga\Projects\tmp\quarkus-scala-three-app\src\main\scala\org\acme\GreetingResource.scala[0m
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 253
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 251
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 255
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 252
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 249
+[0m2021.06.30 21:45:48 WARN  no build target for: C:\Users\rayga\Projects\tmp\quarkus-scala-three-app\src\main\scala\org\acme\GreetingResource.scala[0m
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 260
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 257
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 261
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 268
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 269
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 270
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 267
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 271
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 259
+Jun 30, 2021 9:45:48 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 263
+[0m2021.06.30 22:03:59 WARN  no build target for: C:\Users\rayga\Downloads\code-with-quarkus (2)\code-with-quarkus\src\main\scala\org\acme\GreetingResource.scala[0m
+Jun 30, 2021 10:04:06 PM org.eclipse.lsp4j.jsonrpc.RemoteEndpoint handleCancellation
+WARNING: Unmatched cancel notification for request id 282
+[0m2021.06.30 22:09:06 WARN  no build target for: C:\Users\rayga\Projects\tmp\quarkus-scala-three-app\src\main\scala\org\acme\GreetingResource.scala[0m
+[0m2021.06.30 22:12:42 WARN  no build target for: C:\Users\rayga\Projects\tmp\quarkus-scala-three-app\src\main\scala\org\acme\GreetingResource.scala[0m
+[0m2021.06.30 22:13:58 WARN  no build target for: C:\Users\rayga\Projects\tmp\quarkus-scala-three-app\src\main\scala\org\acme\GreetingResource.scala[0m
+[0m2021.06.30 22:14:09 WARN  no build target for: C:\Users\rayga\Projects\tmp\quarkus-scala-three-app\src\main\scala\org\acme\GreetingResource.scala[0m
+[0m2021.06.30 22:16:09 INFO  shutting down Metals[0m

@@ -1,0 +1,9 @@
+<factorypath>
+    <factorypathentry kind="VARJAR" id="M2_REPO/io/quarkus/quarkus-extension-processor/2.0.0.Final/quarkus-extension-processor-2.0.0.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jboss/jdeparser/jdeparser/2.0.2.Final/jdeparser-2.0.2.Final.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/org/jsoup/jsoup/1.12.1/jsoup-1.12.1.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/github/javaparser/javaparser-core/3.14.10/javaparser-core-3.14.10.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.12.3/jackson-databind-2.12.3.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.12.3/jackson-annotations-2.12.3.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="VARJAR" id="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.12.3/jackson-core-2.12.3.jar" enabled="true" runInBatchMode="false"/>
+</factorypath>

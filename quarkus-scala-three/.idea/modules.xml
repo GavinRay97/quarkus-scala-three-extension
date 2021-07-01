@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/runtime/quarkus-scala-three.iml" filepath="$PROJECT_DIR$/runtime/quarkus-scala-three.iml" />
+      <module fileurl="file://$PROJECT_DIR$/deployment/quarkus-scala-three-deployment.iml" filepath="$PROJECT_DIR$/deployment/quarkus-scala-three-deployment.iml" />
+      <module fileurl="file://$PROJECT_DIR$/quarkus-scala-three-parent.iml" filepath="$PROJECT_DIR$/quarkus-scala-three-parent.iml" />
+    </modules>
+  </component>
+</project>

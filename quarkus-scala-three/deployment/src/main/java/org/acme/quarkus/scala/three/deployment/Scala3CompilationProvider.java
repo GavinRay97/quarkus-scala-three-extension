@@ -4,10 +4,12 @@ import dotty.tools.dotc.core.Contexts.ContextBase;
 import dotty.tools.dotc.interfaces.CompilerCallback;
 import dotty.tools.dotc.Main;
 import dotty.tools.dotc.core.Contexts;
+import dotty.tools.dotc.Compiler;
 import dotty.tools.dotc.interfaces.SourceFile;
 import dotty.tools.dotc.reporting.Diagnostic;
 import dotty.tools.dotc.reporting.Reporter;
-
+import dotty.tools.io.AbstractFile;
+import dotty.tools.io.PlainFile;
 import io.quarkus.bootstrap.model.PathsCollection;
 import io.quarkus.deployment.dev.CompilationProvider;
 
@@ -16,10 +18,15 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-class Scala3CompilationProvider implements CompilationProvider {
+import org.jboss.logging.Logger;
+
+public class Scala3CompilationProvider implements CompilationProvider {
+
+    private static final Logger log = Logger.getLogger(Scala3CompilationProvider.class);
 
     @Override
     public Set<String> handledExtensions() {
@@ -35,15 +42,35 @@ class Scala3CompilationProvider implements CompilationProvider {
 
     @Override
     public void compile(Set<File> files, Context context) {
-        var reporter = new CustomReporter();
+        log.info("[Scala3CompilationProvider] compile() called");
+
+        // var reporter = new CustomReporter();
         var callback = new CustomCompilerCallback();
 
         var classPath = context.getClasspath().stream().map(File::getAbsolutePath)
                 .collect(Collectors.joining(File.pathSeparator));
 
-        var scalaCtx = new ContextBase().initialCtx().fresh().setReporter(reporter).setCompilerCallback(callback);
+        System.out.println("[Scala3CompilationProvider] classPath =");
+        System.out.println(classPath);
+
+        var scalaCtx = new ContextBase().initialCtx().fresh()
+                // .setReporter(reporter)
+                .setCompilerCallback(callback);
+
         scalaCtx.setSetting(scalaCtx.settings().classpath(), classPath);
         scalaCtx.setSetting(scalaCtx.settings().outputDir(), context.getOutputDirectory().getAbsolutePath());
+
+        // var compiler = new Compiler();
+        // List<AbstractFile> dottyFiles = files.stream().map(it -> new
+        // PlainFile((dotty.tools.io.Path) it.toPath()))
+        // .collect(Collectors.toList());
+
+        // scala.collection.immutable.List<AbstractFile> scalaList =
+        // scala.collection.JavaConverters
+        // .collectionAsScalaIterable(dottyFiles).toList();
+
+        // var run = compiler.newRun(scalaCtx.given_Context$lzy1);
+        // run.compile(scalaList);
 
         var args = new String[] {};
         Main.process(args, scalaCtx);
@@ -78,6 +105,9 @@ class Scala3CompilationProvider implements CompilationProvider {
 
         @Override
         public void onSourceCompiled(SourceFile source) {
+            log.info("[Scala3CompilationProvider:CustomCompilerCallback] onSourceCompiled() called");
+            log.info(source);
+
             if (source.jfile().isPresent())
                 pathsList.add(source.jfile().get().getPath());
         }

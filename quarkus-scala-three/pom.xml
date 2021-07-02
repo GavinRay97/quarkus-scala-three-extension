@@ -20,6 +20,11 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <quarkus.version>2.0.0.Final</quarkus.version>
     <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
+
+    <scala-maven-plugin.version>4.5.3</scala-maven-plugin.version>
+    <scala.compat.version>3</scala.compat.version>
+    <scala.version>3.0.0</scala.version>
+
   </properties>
   <dependencyManagement>
     <dependencies>

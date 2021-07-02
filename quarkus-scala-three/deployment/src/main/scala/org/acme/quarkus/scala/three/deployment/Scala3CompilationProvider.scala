@@ -34,32 +34,40 @@ class Scala3CompilationProvider extends CompilationProvider:
   override def handledSourcePaths: util.Set[String] = super.handledSourcePaths
 
   override def compile(files: util.Set[File], context: CompilationProvider.Context): Unit =
-    Scala3CompilationProvider.log.info("[Scala3CompilationProvider] compile() called")
+    val log = Scala3CompilationProvider.log
+
+    log.info("[Scala3CompilationProvider] compile() called")
+
     val callback = CustomCompilerCallback()
     val classPath =
       context.getClasspath.stream
         .map(_.getAbsolutePath)
         .collect(Collectors.joining(File.pathSeparator))
 
-    Scala3CompilationProvider.log.info("[Scala3CompilationProvider NEW] context classPath =")
-    Scala3CompilationProvider.log.info(classPath)
+    log.info("[Scala3CompilationProvider NEW] context classPath =")
+    log.info(classPath)
 
-    val contextBase = new ContextBase()
-
-    given scalaCtx: FreshContext = contextBase.initialCtx.fresh
-
-    scalaCtx.setSetting(scalaCtx.settings.classpath, classPath)
-    scalaCtx.setSetting(
-      scalaCtx.settings.outputDir,
-      new PlainDirectory(Directory(context.getOutputDirectory.getAbsolutePath))
-    )
+    // https://github.com/lampepfl/dotty/blob/b7d2a122555a6aa44cc7590852a80f12512c535e/compiler/test/dotty/tools/DottyTest.scala
+    // https://github.com/scalameta/mdoc/blob/b9437b7d3d0c9e04a9c8e86de96f10db0be5de91/mdoc/src/main/scala-3/mdoc/internal/markdown/MarkdownCompiler.scala
+    val base = new ContextBase {}
+    import base.settings._
+    val ctx = base.initialCtx.fresh
+    ctx.setSetting(ctx.settings.classpath, classPath)
+    ctx.setSetting(ctx.settings.outputDir, new PlainDirectory(Directory(context.getOutputDirectory.getAbsolutePath)))
+    base.initialize()(using ctx)
 
     val dottyFiles: List[AbstractFile] = files.stream().map(it =>
       new PlainFile(dotty.tools.io.Path(it.toPath))
     ).collect(Collectors.toList)
 
+    log.info("dottyFiles")
+    log.info(dottyFiles)
+
+    log.info("dottyFiles.iterator().asScala.toList")
+    log.info(dottyFiles.iterator().asScala.toList)
+
     val compiler = new Compiler
-    val run      = compiler.newRun
+    val run      = compiler.newRun(using ctx)
     run.compile(dottyFiles.iterator().asScala.toList)
 
   override def getSourcePath(classFilePath: Path, sourcePaths: PathsCollection, classesPath: String): Path =
